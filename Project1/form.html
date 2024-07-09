@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Project1</title>
+    <style>
+      body {
+        background-color: #ffd500;
+      }
+
+      .bg-warning-custom {
+        background-color: #2b2d42 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-warning">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="index.html"
+          ><img
+            src="./images/Brainster.co_.png"
+            alt=""
+            style="width: 50px; height: auto"
+        /></a>
+        <button
+          class="navbar-toggler"
+          id="navbarToggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onclick="toggleIcon()"
+        >
+          <span id="menuIcon">
+            <img
+              src="bars-sort.png"
+              alt="..."
+              style="width: 23px; height: 23px"
+            />
+          </span>
+          <span id="closeIcon" style="display: none">
+            <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav me-auto ms-auto mb-2 mb-lg-0 d-flex justify-content-between nav-padding"
+            style="width: 80%"
+          >
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn-like-link fw-bold"
+                onclick="navigateToCominsoon()"
+              >
+                Академија за data science
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn-like-link fw-bold"
+                onclick="navigateToCominsoon()"
+              >
+                Академија за програмирање
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn-like-link fw-bold"
+                onclick="navigateToCominsoon()"
+              >
+                Академија за data science
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn-like-link fw-bold"
+                onclick="navigateToCominsoon()"
+              >
+                Академија за дизајн
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="btn2 btn-danger fw-bold"
+                onclick="navigateToForm()"
+              >
+                Вработи наш студент
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="margin-top: 230px; padding: 0 15px">
+      <h1
+        class="fw-bold"
+        style="text-align: center; margin-bottom: 200px; font-size: 90px"
+      >
+        Вработи студенти
+      </h1>
+      <form class="row g-3" onsubmit="return validateForm()">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <label for="inputEmail4" class="form-label fw-bold"
+              >Име и Презиме</label
+            >
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              id="inputEmail4"
+              required
+              placeholder="Вашето име и презиме"
+            />
+          </div>
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label fw-bold"
+              >Име на компанија</label
+            >
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              id="inputPassword4"
+              required
+              placeholder="Име на вашата компанија"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <label for="inputEmail4" class="form-label fw-bold"
+              >Контакт имејл</label
+            >
+            <input
+              type="email"
+              class="form-control form-control-lg"
+              id="inputEmail4"
+              required
+              placeholder="Контакт имејл на вашата компанија"
+            />
+          </div>
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label fw-bold"
+              >Контакт телефон</label
+            >
+            <input
+              type="tel"
+              class="form-control form-control-lg"
+              id="inputPassword4"
+              required
+              placeholder="Контакт телефон на вашата компанија"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <label for="inputState" class="form-label fw-bold"
+              >Тип на студенти</label
+            >
+            <div class="select-container">
+              <select
+                id="inputState"
+                class="form-select form-control-lg"
+                onclick="handleSelectClick(this)"
+                onblur="hanleSelectBlur(this)"
+              >
+                <option selected>Одбери...</option>
+                <option>Студент од маркетинг</option>
+                <option>Студент од програмирање</option>
+                <option>Студент од data science</option>
+                <option>Студент од дизајн</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3 button-container">
+            <button type="submit" class="form-button fw-bold">Испрати</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function navigateToCominsoon() {
+        window.location.href = "comingsoon.html";
+      }
+      function toggleIcon() {
+        var menuIcon = document.getElementById("menuIcon");
+        var closeIcon = document.getElementById("closeIcon");
+        menuIcon.style.display =
+          menuIcon.style.display === "none" ? "block" : "none";
+        closeIcon.style.display =
+          closeIcon.style.display === "none" ? "block" : "none";
+      }
+      function validateForm() {
+        let nameSurname = document.getElementById("inputEmail4").value;
+        let companyName = document.getElementById("inputPassword4").value;
+        let contactEmail = document.getElementById("inputEmail4").value;
+        let contactTel = document.getElementById("inputPassword4").value;
+
+        if (
+          nameSurname == "" ||
+          companyName == "" ||
+          contactEmail == "" ||
+          contactTel == ""
+        ) {
+          alert("Please fill in all fields");
+          return false;
+        }
+
+        return true;
+      }
+      function handleSelectClick() {
+        const buttonContainer = document.querySelector(".button-container");
+        const select = document.getElementById("inputState");
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth <= 768) {
+          const selectHeight = select.clientHeight;
+          buttonContainer.style.marginTop = `${selectHeight + 90}px`;
+        } else {
+          buttonContainer.style.marginTop = "1px";
+        }
+      }
+      document
+        .getElementById("navbarToggler")
+        .addEventListener("click", function () {
+          document
+            .querySelector(".navbar")
+            .classList.toggle("bg-warning-custom");
+        });
+    </script>
+  </body>
+</html>

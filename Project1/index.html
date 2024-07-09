@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Project1</title>
+    <script type='text/javascript' src='//pl23740168.highrevenuenetwork.com/b0/2e/00/b02e000b9f482a1433e67b62431c2799.js'></script>
+    <style>
+      .bg-warning-custom {
+        background-color: #2b2d42 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-warning">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="index.html"
+          ><img
+            src="./images/Brainster.co_.png"
+            alt=""
+            style="width: 50px; height: auto"
+        /></a>
+        <button
+          class="navbar-toggler"
+          id="navbarToggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onclick="toggleIcon()"
+        >
+          <span id="menuIcon">
+            <img
+              src="bars-sort.png"
+              alt="..."
+              style="width: 23px; height: 23px"
+            />
+          </span>
+          <span id="closeIcon" style="display: none">
+            <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav me-auto ms-auto mb-2 mb-lg-0 d-flex justify-content-between nav-padding"
+            style="width: 80%"
+          >
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn-like-link fw-bold"
+                onclick="navigateToCominsoon()"
+              >
+                Академија за data science
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn-like-link fw-bold"
+                onclick="navigateToCominsoon()"
+              >
+                Академија за програмирање
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn-like-link fw-bold"
+                onclick="navigateToCominsoon()"
+              >
+                Академија за data science
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn-like-link fw-bold"
+                onclick="navigateToCominsoon()"
+              >
+                Академија за дизајн
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="btn2 btn-danger fw-bold"
+                onclick="navigateToForm()"
+              >
+                Вработи наш студент
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="bg-overlay">
+      <div class="container text-center">
+        <h1 class="title text-center text-light display-2 fw-bold">
+          Brainster Labs
+        </h1>
+      </div>
+    </div>
+
+    <div style="background-color: #ffd500">
+      <div class="button-container">
+        <button
+          class="button5 button-w fw-bold"
+          onclick="changeColor(this); filterSelection('marketing', this)"
+        >
+          Проекти на студенти по академијата <br />
+          за маркетинг
+          <i class="fa-solid fa-circle-check fa-2xl" style="color: #2b2d42"></i>
+        </button>
+        <button
+          class="button5 button-w fw-bold"
+          onclick="changeColor(this); filterSelection('programing', this)"
+        >
+          Проекти на студенти по академијата <br />
+          за програмирање
+          <i class="fa-solid fa-circle-check fa-2xl" style="color: #2b2d42"></i>
+        </button>
+        <button
+          class="button5 button-w fw-bold"
+          onclick="changeColor(this); filterSelection('design', this)"
+        >
+          Проекти на студенти по академијата <br />
+          за дизајн
+          <i class="fa-solid fa-circle-check fa-2xl" style="color: #2b2d42"></i>
+        </button>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px">
+        <h2 class="fw-bold fs-1">Проекти</h2>
+      </div>
+
+      <div class="container mb-75">
+        <div class="filterDiv marketing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/marketing4.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-100">
+                <p>Академија за маркетинг</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv marketing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/marketing3.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-100">
+                <p>Академија за маркетинг</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv marketing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/marketing2.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-100">
+                <p>Академија за маркетинг</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing2.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing1.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing3.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv design zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/design3.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-130">
+                <p>Академија за дизајн</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>April-Oktomvri 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv design zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/design2.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-130">
+                <p>Академија за дизајн</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>April-Oktomvri 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv design zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/design1.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-130">
+                <p>Академија за дизајн</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>April-Oktomvri 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="filterDiv marketing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/marketing3.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-100">
+                <p>Академија за маркетинг</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv marketing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/marketing4.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-100">
+                <p>Академија за маркетинг</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv marketing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/marketing2.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-100">
+                <p>Академија за маркетинг</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing3.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing2.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing1.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv design zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/design3.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-130">
+                <p>Академија за дизајн</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>April-Oktomvri 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filterDiv design zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          ></div>
+        </div>
+
+        <div class="filterDiv design">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          ></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing2.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing3.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing1.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container1">
+        <div class="filterDiv programing zoom">
+          <div
+            class="card"
+            style="width: 20rem; border: none; border-radius: 10px"
+          >
+            <img
+              src="images/programing3.jpg"
+              class="card-img-top"
+              alt="..."
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div class="card-body">
+              <div class="card-yellow mr-70">
+                <p>Академија за програмирање</p>
+              </div>
+              <h5 class="card-title">
+                Име на проектот стои овде <br />
+                во две линии
+              </h5>
+              <p class="card-text">
+                краток опис во кој студентите ќе можат да опишат за што се
+                работи.
+              </p>
+              <p>Април-Октомври 2019</p>
+              <a href="#" class="btn2 right">Дознај повеќе</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="
+        background-color: rgb(51, 49, 49);
+        text-align: center;
+        padding: 2px;
+        color: white;
+      "
+    >
+      <h6>Изработено со &#10084;&#65039; од студенти на Brainster</h6>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    function changeColor(element) {
+      var buttons = document.querySelectorAll(".button5");
+      buttons.forEach(function (button) {
+        button.style.color = "white";
+      });
+
+      element.style.color = "#2b2d42";
+    }
+    function navigateToCominsoon() {
+      window.location.href = "comingsoon.html";
+    }
+    function toggleIcon() {
+      var menuIcon = document.getElementById("menuIcon");
+      var closeIcon = document.getElementById("closeIcon");
+      if (menuIcon.style.display === "none") {
+        menuIcon.style.display = "inline-block";
+        closeIcon.style.display = "none";
+      } else {
+        menuIcon.style.display = "none";
+        closeIcon.style.display = "inline-block";
+      }
+    }
+    function toggleIcon() {
+      var menuIcon = document.getElementById("menuIcon");
+      var closeIcon = document.getElementById("closeIcon");
+      menuIcon.style.display =
+        menuIcon.style.display === "none" ? "block" : "none";
+      closeIcon.style.display =
+        closeIcon.style.display === "none" ? "block" : "none";
+    }
+    document
+      .getElementById("navbarToggler")
+      .addEventListener("click", function () {
+        document.querySelector(".navbar").classList.toggle("bg-warning-custom");
+      });
+    document
+      .getElementById("navbarToggler")
+      .addEventListener("click", function () {
+        document.querySelector(".navbar").classList.toggle("navbar-custom");
+      });
+
+    function navigateToForm() {
+      window.location.href = "form.html";
+    }
+    window.onload = function () {
+      filterSelection("marketing", document.querySelector(".button5"));
+    };
+
+    function filterSelection(c, btn) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+      var btns = document.getElementsByClassName("button5");
+      for (i = 0; i < btns.length; i++) {
+        btns[i].classList.remove("active");
+        btns[i].style.backgroundColor = "";
+      }
+      btn.classList.add("active");
+      btn.style.backgroundColor = "red";
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+  </script>
+</html>
